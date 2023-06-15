@@ -1,10 +1,10 @@
 import loginPage from './pages/login';
-import profilePage from './pages/profile';
+import mainPage from './pages/main';
 
 export default function App() {
   return (
     <div>
-      {profilePage()}
+      {mainPage()}
     </div>
   );
 }

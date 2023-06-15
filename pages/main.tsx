@@ -1,6 +1,6 @@
 import { View, StyleSheet, Text, Pressable, TextInput } from 'react-native';
 
-let profilePage = () => {
+let mainPage = () => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -90,7 +90,7 @@ let profilePage = () => {
         <View style={styles.line} />
         <View style={styles.navbar}>
           <Pressable style={styles.navbarButton}>
-            <Text style={styles.loginButtonText}>Profil</Text>
+            <Text style={styles.loginButtonText}>Főoldal</Text>
           </Pressable>
           <Pressable style={styles.navbarButton}>
             <Text style={styles.loginButtonText}>Helyettesítés</Text>
@@ -104,4 +104,4 @@ let profilePage = () => {
   );
 };
 
-export default profilePage;
+export default mainPage;
