@@ -1,5 +1,10 @@
 import { View, StyleSheet, Text, Pressable, TextInput } from 'react-native';
 
+
+// storeoljuk local amikor msauth visszakuldi a jásont (ha lesz bekkend)
+let className = '9. D';
+let name = 'Gipsz Jakab Jákob';
+
 let mainPage = () => {
   const styles = StyleSheet.create({
     container: {
@@ -80,8 +85,8 @@ let mainPage = () => {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>Gipsz Jakab Jákob</Text>
-        <Text style={styles.class}>kilencedik dé</Text>
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.class}>{className}</Text>
         <View style={styles.line} />
         <Text style={styles.title}>Hírek</Text>
         <View style={styles.line} />
