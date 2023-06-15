@@ -1,11 +1,11 @@
 import loginPage from './pages/login';
 import mainPage from './pages/main';
-import chatPage from './pages/chat';
+import helyettesitesPage from './pages/helyettesites';
 
 export default function App() {
   return (
     <div>
-      {chatPage()}
+      {helyettesitesPage()}
     </div>
   );
 }

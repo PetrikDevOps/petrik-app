@@ -101,7 +101,7 @@ let mainPage = () => {
             <Text style={styles.loginButtonText}>Helyettesítés</Text>
           </Pressable>
           <Pressable style={styles.navbarButton}>
-            <Text style={styles.loginButtonText}>Chat</Text>
+            <Text style={styles.loginButtonText}>Buszok</Text>
           </Pressable>
         </View>
       </View>
