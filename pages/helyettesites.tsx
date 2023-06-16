@@ -1,120 +1,123 @@
-import { View, StyleSheet, Text, Pressable, TextInput } from 'react-native';
+import { View, StyleSheet, Text, Pressable, ScrollView } from 'react-native';
+import HelyettesitesTable from '../components/table';
+import Navbar from '../components/navbar';
 
-let helyettesitesPage = () => {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      backgroundColor: '#1E1E1E',
-      height: '100vh',
-      width: '100vw',
-    },
-    line: {
-      width: '100vh',
-      height: 1,
-      alignSelf: 'center',
-      backgroundColor: '#474747',
-    },
-    title: {
-      color: '#FFFFFF',
-      fontSize: 40,
-      textAlign: 'center',
-      marginTop: 20,
-      marginBottom: 10,
-      fontWeight: 'bold',
-    },
-    fasz: {
-      color: '#FFFFFF',
-      fontSize: 24,
-      textAlign: 'center',
-      marginTop: 10,
-    },
-    geci: {
-      color: '#FFFFFF',
-      fontSize: 24,
-      textAlign: 'center',
-      marginBottom: 10,
-    },
-    class: {
-      color: '#FFFFFF',
-      fontSize: 20,
-      textAlign: 'center',
-      marginVertical: 10,
-    },
-    input: {
-      height: 50,
-      borderRadius: 10,
-      borderWidth: 1,
-      borderColor: '#ccc',
-      paddingHorizontal: 10,
-      marginBottom: 10,
-      color: '#FFFFFF',
-      marginHorizontal: 20,
-    },
-    footer: {
-      marginTop: 20,
-      color: '#FFFFFF',
-      textAlign: 'center',
-      fontSize: 14,
-      marginBottom: 20,
-    },
-    loginButton: {
-      height: 50,
-      borderRadius: 10,
-      backgroundColor: '#474747',
-      width: 100,
-      alignSelf: 'center',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    loginButtonText: {
-      color: '#FFFFFF',
-      textAlign: 'center',
-    },
-    navbarButton: {
-      height: 50,
-      width: 100,
-      borderRadius: 100,
-      backgroundColor: '#474747',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    navbar: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-evenly',
-      marginVertical: 20,
-    },
-  });
+const helyettesitesPage = () => {
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            backgroundColor: '#1E1E1E',
+            height: '100vh',
+            width: '100vw',
+        },
+        title: {
+            fontWeight: '400',
+            fontSize: 40,
+            color: '#EAEAEA',
+            textAlign: 'center',
+            marginTop: 10,
+        },
+        line: {
+            width: '90%',
+            height: 1,
+            backgroundColor: '#EAEAEA',
+            marginTop: 10,
+            marginBottom: 10,
+            alignSelf: 'center',
+        },
+        newsContainer: {
+            display: 'flex',
+            flexDirection: 'column',
+            marginHorizontal: '5%',
+        },
+        newsBigName: {
+            fontSize: 40,
+            fontWeight: '400',
+            color: '#FFFFFF',
+        },
+        newsName: {
+            fontSize: 20,
+            color: '#2AB4AB',
+            textAlign: 'right',
+            marginRight: '5%',
+        },
+        newsRightName: {
+          fontSize: 20,
+          color: '#2AB4AB',
+          textAlign: 'left',
+          marginLeft: '5%',
+        },
+        descriptionText: {
+            fontSize: 18,
+            color: '#FFFFFF',
+        },
+        navbar: {
+            height: 100,
+            backgroundColor: '#252525',
+            boxShadow: '0px -3px 4px #2AB4AB',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            paddingTop: 10,
+        },
+        navbarActiveButton: {
+            width: '75px',
+            height: '75px',
+            backgroundColor: '#2AB4AB',
+            borderRadius: 100,
+        },
+        navbarButton: {
+            width: '75px',
+            height: '75px',
+            backgroundColor: '#D9D9D9',
+            borderRadius: 100,
+        },
+        navbarButtonText: {
+            fontSize: 20,
+            color: '#000000',
+            fontWeight: '400',
+            textAlign: 'center',
+            lineHeight: 75,
+        },
+        teacherText: {
+          fontWeight: '400',
+          fontSize: 30,
+          color: '#EAEAEA',
+          textAlign: 'center',
+          marginTop: 10,
+        },
+        scrollViewContainer: {
+          flex: 1, // Take up all available space
+        },
+    });
 
-  return (
-    <View style={styles.container}>
-      <View>
-        <Text style={styles.title}>Helyettesítés</Text>
-        <Text style={styles.class}>9. D</Text>
-        <View style={styles.line} />
-        <Text style={styles.fasz}>1. Óra</Text>
-        <Text style={styles.geci}>Elmarad</Text>
-        <View style={styles.line} />
-      </View>
-      <View>
-        <View style={styles.line} />
-        <View style={styles.navbar}>
-          <Pressable style={styles.navbarButton}>
-            <Text style={styles.loginButtonText}>Főoldal</Text>
-          </Pressable>
-          <Pressable style={styles.navbarButton}>
-            <Text style={styles.loginButtonText}>Helyettesítés</Text>
-          </Pressable>
-          <Pressable style={styles.navbarButton}>
-            <Text style={styles.loginButtonText}>Buszok</Text>
-          </Pressable>
+    return (
+        <View style={styles.container}>
+            <View>
+                <Text style={styles.title}>Helyettesítés</Text>
+                <Text style={styles.newsName}>
+                    10.E Helyettesítés
+                </Text>
+                <View style={styles.line} />
+                <Text style={styles.newsRightName}>
+                    Hétfő
+                </Text>
+            </View>
+            <View style={styles.scrollViewContainer}>
+                <ScrollView>
+                  <Text style={styles.teacherText}>
+                    Béresné Bodó Noémi
+                  </Text>
+                  <HelyettesitesTable />
+                </ScrollView>
+            </View>
+            {/* navbar */}
+             <Navbar />
         </View>
-      </View>
-    </View>
-  );
+    );
 };
 
 export default helyettesitesPage;
