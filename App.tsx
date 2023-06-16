@@ -1,11 +1,9 @@
-import loginPage from './pages/login';
-import mainPage from './pages/main';
-import helyettesitesPage from './pages/helyettesites';
+import newsPage from './pages/news';
 
 export default function App() {
   return (
     <div>
-      {helyettesitesPage()}
+      {newsPage()}
     </div>
   );
 }
