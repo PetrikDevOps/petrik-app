@@ -46,12 +46,14 @@ const newPage = () => {
         descriptionText: {
             fontSize: 18,
             color: '#FFFFFF',
+            marginBottom: 10,
         },
         image: {
             width: '100%',
             height: '250px',
             backgroundColor: '#FFFFFF',
             marginVertical: 10,
+            alignSelf: 'center',
         },
         navbar: {
             height: 100,
@@ -80,7 +82,11 @@ const newPage = () => {
             fontWeight: '400',
             textAlign: 'center',
             lineHeight: 75,
-        }
+        },
+        scrollViewContainer: {
+            flex: 1, // Take up all available space
+            marginHorizontal: 20,
+        },
     });
 
     return (
@@ -92,9 +98,9 @@ const newPage = () => {
                 </Text>
                 <View style={styles.line} />
             </View>
-            <View style={styles.newsContainer}>
-                <View style={styles.image} />
+            <View style={styles.scrollViewContainer}>
                 <ScrollView>
+                    <View style={styles.image} />
                     <Text style={styles.descriptionText}>
                         Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit,

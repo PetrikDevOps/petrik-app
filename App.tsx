@@ -6,7 +6,7 @@ import classSelectionPage from './pages/classSelection';
 export default function App() {
   return (
     <div>
-      {classSelectionPage()}
+      {newPage()}
     </div>
   );
 }
