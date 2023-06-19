@@ -27,7 +27,6 @@ const helyettesitesPage = () => {
       flex: 1,
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'space-between',
       backgroundColor: '#1E1E1E',
       height: '100vh',
       width: '100vw',
@@ -52,88 +51,13 @@ const helyettesitesPage = () => {
       flexDirection: 'column',
       marginHorizontal: '5%',
     },
-    newsBigName: {
-      fontSize: 40,
-      fontWeight: '400',
-      color: '#FFFFFF',
-    },
-    newsName: {
-      fontSize: 20,
-      color: '#2AB4AB',
-      textAlign: 'right',
-      marginRight: '5%',
-    },
-    newsRightName: {
-      fontSize: 20,
-      color: '#2AB4AB',
-      textAlign: 'left',
-      marginLeft: '5%',
-    },
-    descriptionText: {
-      fontSize: 18,
-      color: '#FFFFFF',
-    },
-    navbar: {
+    navbar:{
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
       height: 100,
-      backgroundColor: '#252525',
-      boxShadow: '0px -3px 4px #2AB4AB',
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-evenly',
-      paddingTop: 10,
-    },
-    navbarActiveButton: {
-      width: '75px',
-      height: '75px',
-      backgroundColor: '#2AB4AB',
-      borderRadius: 100,
-    },
-    navbarButton: {
-      width: '75px',
-      height: '75px',
-      backgroundColor: '#D9D9D9',
-      borderRadius: 100,
-    },
-    navbarButtonText: {
-      fontSize: 20,
-      color: '#000000',
-      fontWeight: '400',
-      textAlign: 'center',
-      lineHeight: 75,
-    },
-    teacherText: {
-      fontWeight: '400',
-      fontSize: 30,
-      color: '#EAEAEA',
-      textAlign: 'center',
-      marginTop: 10,
-    },
-    scrollViewContainer: {
-      flex: 1,
-      flexDirection: 'row', // Display scroll views side by side
-    },
-    scrollView: {
-      flex: 1, // Take up equal space
-    },
-    errorMessage: {
-      color: 'red',
-      textAlign: 'center',
-    },
-    buttonContainer: {
-      alignItems: 'center',
-      marginBottom: 20,
-    },
-    button: {
-      paddingVertical: 10,
-      paddingHorizontal: 20,
-      backgroundColor: '#2AB4AB',
-      borderRadius: 5,
-    },
-    buttonText: {
-      color: '#FFFFFF',
-      fontSize: 18,
-      fontWeight: 'bold',
-    },
+    }
   });
 
   return (
@@ -143,7 +67,10 @@ const helyettesitesPage = () => {
       <View style={styles.newsContainer}>
         {classCh()}
       </View>
+      <View style={styles.line} />
+        <View style={styles.navbar}>
       {Navbar()}
+        </View >
     </View>
   );
 };

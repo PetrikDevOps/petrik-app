@@ -11,7 +11,7 @@ const ScrollableComponent = () => {
     const scrollHeight = scrollContainer.scrollHeight;
     const containerHeight = scrollContainer.clientHeight;
     const itemHeight = scrollHeight / data1.length;
-    const selectedItemIndex = Math.floor(scrollTop / (itemHeight-70));
+    const selectedItemIndex = Math.floor(scrollTop / (itemHeight-80));
     const selectedValue = data1[selectedItemIndex];
     
     // Ellenőrizzük, hogy a scroll a legalsó pozícióban van-e
@@ -44,9 +44,8 @@ const ScrollableComponent = () => {
   const data2 = ['ny', 'kny', 'a', 'b', 'c', 'd', 'e'];
 
   return (
-    <div>
-        <div>{}</div>
-<div style={{ display: 'flex', height: '10vh' }}>
+
+<div style={{ display: 'flex', height: '10vh', marginTop: '5vh' }}>
       <div
         style={{
           flex: 1,
@@ -63,7 +62,7 @@ const ScrollableComponent = () => {
             style={{
               padding: '2vh',
               background:
-                selectedValue1 === item ? 'lightblue' : 'transparent',
+                selectedValue1 === item ? '#2AB4AB' : 'transparent',
             }}
           >
             {item}
@@ -86,14 +85,13 @@ const ScrollableComponent = () => {
             style={{
                 padding: '2vh',
               background:
-                selectedValue2 === item ? 'lightblue' : 'transparent',
+                selectedValue2 === item ? '#2AB4AB' : 'transparent',
             }}
           >
             {item}
           </div>
         ))}
       </div>
-    </div>
     </div>
   );
 };
