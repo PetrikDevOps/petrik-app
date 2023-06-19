@@ -1,32 +1,29 @@
 import React from 'react';
 import { StyleSheet, View, Text, Pressable } from 'react-native';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import News from '../pages/news';
-import New from '../pages/new';
-import Helyettesites from '../pages/helyettesites';
-import ClassSelection from '../pages/classSelection';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <Router>
+    
       <View style={styles.navbar}>
         <Pressable style={styles.navbarActiveButton}>
-          <Text style={styles.navbarButtonText}>H</Text>
+            <Link to="/">
+                <Text style={styles.navbarButtonText}>H</Text>
+            </Link>
         </Pressable>
         <Pressable style={styles.navbarButton}>
-          <Text style={styles.navbarButtonText}>H</Text>
+            <Link to="/ht">
+                <Text style={styles.navbarButtonText}>H</Text>
+            </Link>
         </Pressable>
         <Pressable style={styles.navbarButton}>
-          <Text style={styles.navbarButtonText}>B</Text>
+            <Link to="/cs">
+                <Text style={styles.navbarButtonText}>B</Text>
+            </Link>
         </Pressable>
       </View>
 
-      <Routes>
-        <Route path="/" element={<News />} />
-        <Route path="/ht" element={<Helyettesites />} />
-        <Route path="/cs" element={<ClassSelection />} />
-      </Routes>
-    </Router>
+      
   );
 };
 

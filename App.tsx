@@ -1,14 +1,19 @@
-import newsPage from './pages/news';
-import newPage from './pages/new';
-import helyettesitesPage from './pages/helyettesites';
-import classSelectionPage from './pages/classSelection';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import News from './pages/news';
 
+import Helyettesites from './pages/helyettesites';
+import ClassSelection from './pages/classSelection';
 
 export default function App() {
   return (
-    <div>
-      {newPage()}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<News />} />
+        <Route path="/ht" element={<Helyettesites />} />
+        <Route path="/cs" element={<ClassSelection />} />
+      </Routes>
+
+    </Router>
   );
 }

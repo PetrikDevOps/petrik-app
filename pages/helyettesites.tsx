@@ -114,8 +114,7 @@ const helyettesitesPage = () => {
                   <HelyettesitesTable />
                 </ScrollView>
             </View>
-            {/* navbar */}
-             <Navbar />
+            {Navbar()}
         </View>
     );
 };

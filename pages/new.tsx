@@ -1,6 +1,7 @@
 import { View, StyleSheet, Text, Pressable, ScrollView } from 'react-native';
 import Navbar from '../components/navbar';
 
+
 const newPage = () => {
     const styles = StyleSheet.create({
         container: {
@@ -118,8 +119,7 @@ const newPage = () => {
                     </Text>
                 </ScrollView>
             </View>
-            {/* navbar */}
-            <Navbar />
+            {Navbar()}
         </View>
     );
 };

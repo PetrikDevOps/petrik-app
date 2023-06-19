@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Pressable, ScrollView } from 'react-native';
+import Navbar from '../components/navbar';
 
 const helyettesitesPage = () => {
   const [selectedGrade, setSelectedGrade] = useState(9);
@@ -182,6 +183,7 @@ const helyettesitesPage = () => {
           <Text style={styles.buttonText}>Check Class</Text>
         </Pressable>
       </View>
+      {Navbar()}
     </View>
   );
 };
