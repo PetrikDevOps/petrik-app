@@ -67,7 +67,6 @@ const helyettesitesPage = () => {
       <View style={styles.newsContainer}>
         {classCh()}
       </View>
-      <View style={styles.line} />
         <View style={styles.navbar}>
       {Navbar()}
         </View >
