@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Pressable, ScrollView } from 'react-native';
 import Navbar from '../components/navbar';
+import classCh from '../components/classCh';
 
 const helyettesitesPage = () => {
   const [selectedGrade, setSelectedGrade] = useState(9);
@@ -137,51 +138,10 @@ const helyettesitesPage = () => {
 
   return (
     <View style={styles.container}>
-      <View>
-        <Text style={styles.title}>Helyettesítés</Text>
-        <Text style={styles.newsName}>Válassz Osztályt</Text>
-        <View style={styles.line} />
-        <Text style={styles.newsRightName}>Hétfő</Text>
-      </View>
-      <View style={styles.scrollViewContainer}>
-        <ScrollView style={styles.scrollView}>
-          {[9, 10, 11, 12].map((grade) => (
-            <Pressable
-              key={grade}
-              style={{
-                ...styles.teacherText,
-                backgroundColor:
-                  selectedGrade === grade ? '#2AB4AB' : 'transparent',
-              }}
-              onPress={() => setSelectedGrade(grade)}
-            >
-              <Text>{grade}</Text>
-            </Pressable>
-          ))}
-        </ScrollView>
-        <ScrollView style={styles.scrollView}>
-          {['KNy', 'Ny', 'A', 'B', 'C', 'D'].map((className) => (
-            <Pressable
-              key={className}
-              style={{
-                ...styles.teacherText,
-                backgroundColor:
-                  selectedClass === className ? '#2AB4AB' : 'transparent',
-              }}
-              onPress={() => setSelectedClass(className)}
-            >
-              <Text>{className}</Text>
-            </Pressable>
-          ))}
-        </ScrollView>
-      </View>
-      {errorMessage !== '' && (
-        <Text style={styles.errorMessage}>{errorMessage}</Text>
-      )}
-      <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={validateClass}>
-          <Text style={styles.buttonText}>Check Class</Text>
-        </Pressable>
+      <Text style={styles.title}>Helyettesítés</Text>
+      <View style={styles.line} />
+      <View style={styles.newsContainer}>
+        {classCh()}
       </View>
       {Navbar()}
     </View>
