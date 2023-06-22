@@ -7,6 +7,7 @@ import ClassSelection from './pages/classSelection';
 
 import Busz from './pages/busz';
 
+import Profile from './pages/profile';
 
 export default function App() {
   return (
