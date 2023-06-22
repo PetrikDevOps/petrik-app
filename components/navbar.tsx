@@ -17,8 +17,13 @@ const Navbar = () => {
             </Link>
         </Pressable>
         <Pressable style={styles.navbarButton}>
-            <Link to="/cs">
+            <Link to="/b">
                 <Text style={styles.navbarButtonText}>B</Text>
+            </Link>
+        </Pressable>
+        <Pressable style={styles.navbarButton}>
+            <Link to="/p">
+                <Text style={styles.navbarButtonText}>P</Text>
             </Link>
         </Pressable>
       </View>
