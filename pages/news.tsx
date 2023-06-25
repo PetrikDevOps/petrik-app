@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text, Pressable, ScrollView } from 'react-native';
 import Navbar from '../components/navbar';
 
-const newsPage = () => {
+const NewsPage = () => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -134,4 +134,4 @@ const newsPage = () => {
   );
 };
 
-export default newsPage;
+export default NewsPage;

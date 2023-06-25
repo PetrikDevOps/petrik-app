@@ -2,7 +2,7 @@ import { View, StyleSheet, Text, Pressable, ScrollView } from 'react-native';
 import Navbar from '../components/navbar';
 
 
-const newPage = () => {
+const NewPage = () => {
     const styles = StyleSheet.create({
         container: {
             flex: 1,
@@ -124,4 +124,4 @@ const newPage = () => {
     );
 };
 
-export default newPage;
+export default NewPage;

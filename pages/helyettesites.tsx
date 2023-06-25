@@ -2,7 +2,7 @@ import { View, StyleSheet, Text, Pressable, ScrollView } from 'react-native';
 import HelyettesitesTable from '../components/table';
 import Navbar from '../components/navbar';
 
-const helyettesitesPage = () => {
+const HelyettesitesPage = () => {
     const styles = StyleSheet.create({
         container: {
             flex: 1,
@@ -119,4 +119,4 @@ const helyettesitesPage = () => {
     );
 };
 
-export default helyettesitesPage;
+export default HelyettesitesPage;
