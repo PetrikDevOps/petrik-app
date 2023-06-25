@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "petrik-app",
+    "name": "Petrik",
     "slug": "petrik-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1E1E1E"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -18,13 +18,19 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.petrikdevops.petrikapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#1E1E1E"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "437a7cf8-a90e-4257-bdec-91743462ce22"
+      }
     }
   }
 }
